@@ -1,4 +1,4 @@
-# SOP-3-1-
+# SOP-3-2
 Denoising of Scans of the Eye and Surface Detection. 
 
   Week 1:  
