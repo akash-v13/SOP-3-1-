@@ -26,3 +26,20 @@ def whitenoise():
     
     img.show()
     img.save("half.png")
+    
+
+def edge():
+    img = cv2.imread("half.png")
+    edges = cv2.Canny(img,100,200)
+    plt.ioff()
+
+    plt.subplot(121), plt.imshow(img,cmap='gray')
+    plt.title('Original Image'), plt.xticks([]), plt.yticks([])
+    plt.subplot(122), plt.imshow(edges,cmap='gray')
+    plt.title('Post Detection'), plt.xticks([]), plt.yticks([])
+
+    plt.show()
+
+if __name__ == "__main__":
+    whitenoise()
+    edge()
