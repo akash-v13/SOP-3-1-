@@ -40,6 +40,14 @@ def edge():
 
     plt.show()
 
+def edgecoord():
+    img = cv2.imread("half.png")
+    edges = cv2.Canny(img,100,200)
+    indices = np.where(edges != [0])
+    coordinates = zip(indices[0], indices[1])
+    print(list(coordinates))
+
 if __name__ == "__main__":
     whitenoise()
     edge()
+    edgecoord()
